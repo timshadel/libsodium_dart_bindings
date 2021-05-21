@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 0.42.0">
+  <meta name="description" content="sodium API docs, for the Dart programming language.">
+  <title>sodium - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+
+  
+</head>
+
+
+<body data-base-href=""
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/Skycoder42/libsodium_dart_bindings">sodium package</a></li>
+  </ol>
+  <div class="self-name">sodium</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="https://github.com/Skycoder42/libsodium_dart_bindings">sodium package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">sodium</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="sodium/sodium-library.html">sodium</a></li>
+      <li><a href="sodium.ffi/sodium.ffi-library.html">sodium.ffi</a></li>
+      <li><a href="sodium.js/sodium.js-library.html">sodium.js</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="sodium">sodium</h1>
+<p><a href="https://github.com/Skycoder42/libsodium_dart_bindings/actions/workflows/sodium_ci.yaml"><img src="https://github.com/Skycoder42/libsodium_dart_bindings/actions/workflows/sodium_ci.yaml/badge.svg" alt="Continous Integration for package sodium"></a>
+<a href="https://pub.dev/packages/sodium"><img src="https://img.shields.io/pub/v/sodium" alt="Pub Version"></a></p>
+<p>Dart bindings for libsodium, supporting both the VM and JS without flutter 
+dependencies.</p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#features">Features</a>
+<ul>
+<li><a href="#api-status">API Status</a></li>
+</ul>
+</li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#loading-libsodium">Loading libsodium</a>
+<ul>
+<li><a href="#vm---loading-the-dynamic-library">VM - loading the dynamic library</a></li>
+<li><a href="#transpiled-javascript---loading-the-javascript-code">Transpiled JavaScript - loading the JavaScript code.</a>
+<ul>
+<li><a href="#loading-sodiumjs-into-the-browser-via-dart">Loading sodium.js into the browser via dart.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#using-the-api">Using the API</a></li>
+</ul>
+</li>
+<li><a href="#documentation">Documentation</a>
+<ul>
+<li><a href="#example-for-the-dart-vm">Example for the dart VM</a></li>
+<li><a href="#example-in-the-browser">Example in the browser</a></li>
+</ul>
+</li>
+</ul>
+<p><small><i><a href="https://ecotrust-canada.github.io/markdown-toc/">Table of contents generated with markdown-toc</a></i></small></p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Provides a simple to use dart API for accessing libsodium</li>
+<li>High-Level API that is the same for both VM and JS</li>
+<li>Aims to provide access to all primary libsodium APIs. See 
+<a href="#api-status">API Status</a> for more details.</li>
+<li>Provides native APIs for tighter integration, if necessary</li>
+</ul>
+<h3 id="api-status">API Status</h3>
+<p>The following table shows the current status of the implementation. APIs that
+have already been ported get the ✔️, those that are planned but not there yet
+have 🚧. If you see an ❌, it means that the API is not available on that 
+platform and thus cannot be implemented. APIs that are marked with ❔ are still
+up for debate, whether the will be added to the library Version 1.0.0, or maybe 
+later. APIs that are not listet yet have either been forgotten or are not 
+planned. If you find one you would like to have made available, please create an
+issue for it, and I will add it to the list.</p>
+<p>API based on libsodium version: <em>1.0.18</em></p>
+<table><thead><tr><th>libsodium API</th><th>VM</th><th>JS</th><th>Documentation</th></tr></thead><tbody><tr><td>padding</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/padding">https://libsodium.gitbook.io/doc/padding</a></td></tr><tr><td>memory</td><td>✔️</td><td>❌</td><td><a href="https://libsodium.gitbook.io/doc/memory_management">https://libsodium.gitbook.io/doc/memory_management</a></td></tr><tr><td>randombytes</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/generating_random_data">https://libsodium.gitbook.io/doc/generating_random_data</a></td></tr><tr><td>crypto_secretbox</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox">https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox</a></td></tr><tr><td>crypto_secretstream</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretstream">https://libsodium.gitbook.io/doc/secret-key_cryptography/secretstream</a></td></tr><tr><td>crypto_auth</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secret-key_authentication">https://libsodium.gitbook.io/doc/secret-key_cryptography/secret-key_authentication</a></td></tr><tr><td>crypto_box</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/authenticated_encryption">https://libsodium.gitbook.io/doc/public-key_cryptography/authenticated_encryption</a></td></tr><tr><td>crypto_sign</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures">https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures</a></td></tr><tr><td>crypto_box_seal</td><td>🚧</td><td>🚧</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes">https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes</a></td></tr><tr><td>crypto_generichash</td><td>🚧</td><td>🚧</td><td><a href="https://libsodium.gitbook.io/doc/hashing/generic_hashing">https://libsodium.gitbook.io/doc/hashing/generic_hashing</a></td></tr><tr><td>crypto_shorthash</td><td>🚧</td><td>🚧</td><td><a href="https://libsodium.gitbook.io/doc/hashing/short-input_hashing">https://libsodium.gitbook.io/doc/hashing/short-input_hashing</a></td></tr><tr><td>crypto_pwhash</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/password_hashing/default_phf">https://libsodium.gitbook.io/doc/password_hashing/default_phf</a></td></tr><tr><td>crypto_kdf</td><td>🚧</td><td>🚧</td><td><a href="https://libsodium.gitbook.io/doc/key_derivation">https://libsodium.gitbook.io/doc/key_derivation</a></td></tr><tr><td>crypto_kx</td><td>🚧</td><td>🚧</td><td><a href="https://libsodium.gitbook.io/doc/key_exchange">https://libsodium.gitbook.io/doc/key_exchange</a></td></tr><tr><td>crypto_onetimeauth</td><td>🚧</td><td>🚧</td><td><a href="https://libsodium.gitbook.io/doc/advanced/poly1305">https://libsodium.gitbook.io/doc/advanced/poly1305</a></td></tr><tr><td>crypto_scalarmult</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/scalar_multiplication">https://libsodium.gitbook.io/doc/advanced/scalar_multiplication</a></td></tr><tr><td>crypto_aead</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/aead">https://libsodium.gitbook.io/doc/secret-key_cryptography/aead</a></td></tr><tr><td>crypto_hash_sha</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/sha-2_hash_function">https://libsodium.gitbook.io/doc/advanced/sha-2_hash_function</a></td></tr><tr><td>crypto_auth_hmacsha</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/hmac-sha2">https://libsodium.gitbook.io/doc/advanced/hmac-sha2</a></td></tr></tbody></table>
+<p><strong>Note:</strong> Memory Management in JS is limited to overwriting the memory with 0. 
+All other Memory-APIs are only available in the VM.</p>
+<h2 id="installation">Installation</h2>
+<p>Simply add <code>sodium</code> to your <code>pubspec.yaml</code> and run <code>pub get</code> (or <code>flutter pub get</code>).</p>
+<h2 id="usage">Usage</h2>
+<p>The usage can be split into two parts. The first one is about loading the native
+libsodium into dart, the second one about using the API.</p>
+<h3 id="loading-libsodium">Loading libsodium</h3>
+<p>How you load the library depends on whether you are running in the dart VM or
+as transpiled JS code.</p>
+<p><strong>Note:</strong> For flutter users, there is a another library in the making that will
+completely automate this part.</p>
+<h4 id="vm---loading-the-dynamic-library">VM - loading the dynamic library</h4>
+<p>In the dart VM, <code>dart:ffi</code> is used as backend to load and interact with the
+libsodium binary. So, all you need to do is load such a library and then pass
+it to the sodium APIs. This generally looks like this:</p>
+<pre class="language-.dart"><code class="language-.dart">// required imports
+import 'dart:ffi';
+import 'package:sodium/sodium.dart';
+
+// load the dynamic library into dart
+final libsodium = DynamicLibrary.open('/path/to/libsodium.XXX'); // or DynamicLibrary.process()
+
+// initialize the sodium APIs
+final sodium = await SodiumInit.init(libsodium);
+</code></pre>
+<p>The tricky part here is the path, aka <code>'/path/to/libsodium.XXX'</code>. It depends on
+the platform and how you intend to use the library. My recommendation is to
+follow <a href="https://libsodium.gitbook.io/doc/installation">https://libsodium.gitbook.io/doc/installation</a> to get the library binary
+for your platform and then pass the correct path. If you are linking statically,
+you can use <code>DynamicLibrary.process()</code> (except on windows) instead of the path.</p>
+<p>However, here are some tips on how to get the library for some platforms and
+how to load it there:</p>
+<ul>
+<li><strong>Linux</strong>: Install <code>libsodium</code> via your system package manager. Then, you can load
+the <code>libsodium.so</code> from where the package manager put it.</li>
+<li><strong>Windows</strong>: Download the correct binary from 
+<a href="https://download.libsodium.org/libsodium/releases/">https://download.libsodium.org/libsodium/releases/</a> and simply use the path where
+you placed the library.</li>
+<li><strong>macOS</strong>: Use homebrew and run <code>brew install libsodium</code> - then locate the binary
+in the Cellar. It is typically something like 
+<code>/usr/local/Cellar/libsodium/&lt;version&gt;/lib/libsodium.dylib</code>.</li>
+<li><strong>Android</strong>: Coming soon...</li>
+<li><strong>iOS</strong>: Coming soon...</li>
+</ul>
+<h4 id="transpiled-javascript---loading-the-javascript-code">Transpiled JavaScript - loading the JavaScript code.</h4>
+<p>The correct setup depends on your JavaScript environment (i.e. browser, nodejs,
+...) - however, the general way is the same:</p>
+<pre class="language-.dart"><code class="language-.dart">// required imports
+import 'package:sodium/sodium.dart';
+
+final sodiumJS = // somehow load the sodium.js into dart
+
+// initialize the sodium APIs
+final sodium = await SodiumInit.init(sodiumJS);
+</code></pre>
+<p>The complex part is how to load the library into dart. Generally, you can refer
+to <a href="https://github.com/jedisct1/libsodium.js/#installation">https://github.com/jedisct1/libsodium.js/#installation</a> on how to load the
+library into your JS environment. However, since we are running JavaScript code,
+the setup is a little more complex.</p>
+<p>The only platform I have tried so far is the browser. However, similar 
+approches should work for all JS environments that you can run transpiled dart
+code in.</p>
+<h5 id="loading-sodiumjs-into-the-browser-via-dart">Loading sodium.js into the browser via dart.</h5>
+<p>The idea here is, that the dart code asynchronously loads the <code>sodium.js</code> into
+the browser and then acquires the result of loading it (As recommended in 
+<a href="https://github.com/jedisct1/libsodium.js/#usage-in-a-web-browser-via-a-callback">https://github.com/jedisct1/libsodium.js/#usage-in-a-web-browser-via-a-callback</a>
+). The following code uses the <a href="https://pub.dev/packages/js"><code>package:js</code></a> to 
+interop with JavaScript and perform these steps. You can download the
+<code>sodium.js</code> file from here: 
+<a href="https://github.com/jedisct1/libsodium.js/tree/master/dist/browsers">https://github.com/jedisct1/libsodium.js/tree/master/dist/browsers</a></p>
+<pre class="language-.dart"><code class="language-.dart">// make the dart library JS-interoperable
+@JS()
+library interop;
+
+// required imports
+import 'package:js/js.dart';
+import 'package:sodium/sodium.dart';
+
+// declare a JavaScript type that will provide the callback for the loaded
+// sodium JavaScript object.
+@JS()
+@anonymous
+class SodiumBrowserInit {
+  external void Function(dynamic sodium) get onload;
+
+  external factory SodiumBrowserInit({void Function(dynamic sodium) onload});
+}
+
+Future&lt;Sodium&gt; loadSodiumInBrowser() async {
+  // create a completer that will wait for the library to be loaded
+  final completer = Completer&lt;dynamic&gt;();
+
+  // Set the global `sodium` property to our JS type, with the callback beeing
+  // redirected to the completer
+  setProperty(window, 'sodium', SodiumBrowserInit(
+    onload: allowInterop(completer.complete),
+  ));
+  
+  // Load the sodium.js into the page by appending a `&lt;script&gt;` element
+  final script = ScriptElement();
+  script
+    ..type = 'text/javascript'
+    ..async = true
+    ..src = 'sodium.js'; // use the path where you put the file on your server
+  document.head!.append(script);
+
+  // await the completer
+  final dynamic sodiumJS = await completer.future;
+
+  // initialize the sodium APIs
+  return SodiumInit.init(sodiumJS);
+</code></pre>
+<h3 id="using-the-api">Using the API</h3>
+<p>Once you have acquired the <code>Sodium</code> instance, usage is fairly straight forward.
+The API mirrors the original native C api, splitting different categories of
+methods into different classes for maintainability, which are all built up in
+hierachical order starting at <code>Sodium</code>. For example, if you wanted to use the
+<code>crypto_secretbox_easy</code> method from the C api, the eqivalent dart code would be:</p>
+<pre class="language-.dart"><code class="language-.dart">final sodium = // load libsodium for your platform
+
+// The message to be encrypted, converted to an unsigned char array.
+final String message = 'my very secret message';
+final Int8List messageChars = message.toCharArray();
+final Uint8List messageBytes = messageChars.unsignedView();
+
+// A randomly generated nonce
+final nonce = sodium.randombytes.buf(
+  sodium.crypto.secretBox.nonceBytes,
+);
+
+// Generate a secret key
+final SecureKey key = sodium.crypto.secretBox.keygen();
+
+// Encrypt the data
+final encryptedData = sodium.crypto.secretBox.easy(
+  message: messageBytes,
+  nonce: nonce,
+  key: key,
+)
+
+print(encryptedData);
+
+// after you are done:
+key.dispose();
+</code></pre>
+<p>The only main differences here are, that instead of raw pointers, the dart typed
+lists are used. Also, instead of simply passing a byte array as the key, the
+<code>SecureKey</code> is used. It is a special class created for this library that wraps
+native memory, thus providing a secure way of keeping your keys in memory. You
+can either create such keys via the <code>*_keygen</code> methods, or directly via
+<code>sodium.secure*</code>.</p>
+<p><strong>Note:</strong> Since these keys wrap native memory, it is mandatory that you dispose
+of them after you are done with a key, as otherwise they will leak memory.</p>
+<h2 id="documentation">Documentation</h2>
+<p>The documentation is available at <a href="https://pub.dev/documentation/sodium/latest/">https://pub.dev/documentation/sodium/latest/</a>. A full example can be found at <a href="https://pub.dev/packages/sodium/example">https://pub.dev/packages/sodium/example</a>.</p>
+<p>The example runs both in the VM and on the web. To use it, see below.</p>
+<p>As preparation for all platforms, run the following steps:</p>
+<pre class="language-.sh"><code class="language-.sh">cd packages/sodium
+dart pub get
+dart run build_runner build
+</code></pre>
+<h3 id="example-for-the-dart-vm">Example for the dart VM</h3>
+<p>Locate/Download the libsodium binrary and run the example with it:</p>
+<pre class="language-.sh"><code class="language-.sh">cd packages/sodium/example
+dart pub get
+dart run bin/main_native.dart '/path/to/libsodium.XXX'
+</code></pre>
+<h3 id="example-in-the-browser">Example in the browser</h3>
+<p>First download <code>sodium.js</code> into the examples web directory. Then simply run the 
+example:</p>
+<pre class="language-.sh"><code class="language-.sh">dart pub global activate webdev
+
+cd packages/sodium/example/web
+curl -Lo sodium.js https://raw.githubusercontent.com/jedisct1/libsodium.js/master/dist/browsers/sodium.js
+
+cd ..
+dart pub get
+dart pub global run webdev serve --release
+# Visit http://127.0.0.1:8080 in the browser
+</code></pre>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="sodium">
+  <span class="name"><a href="sodium/sodium-library.html">sodium</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="sodium.ffi">
+  <span class="name"><a href="sodium.ffi/sodium.ffi-library.html">sodium.ffi</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+          <dt id="sodium.js">
+  <span class="name"><a href="sodium.js/sodium.js-library.html">sodium.js</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    sodium
+      0.1.3
+  </span>
+
+  
+</footer>
+
+
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+
+</body>
+
+</html>
+
