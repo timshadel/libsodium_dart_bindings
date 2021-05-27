@@ -81,6 +81,7 @@
     <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../../sodium/Box/openDetached.html">openDetached</a></li>
     <li><a href="../../sodium/Box/openEasy.html">openEasy</a></li>
+    <li><a href="../../sodium/Box/precalculate.html">precalculate</a></li>
     <li><a href="../../sodium/Box/seal.html">seal</a></li>
     <li><a href="../../sodium/Box/sealOpen.html">sealOpen</a></li>
     <li><a href="../../sodium/Box/seedKeyPair.html">seedKeyPair</a></li>
@@ -107,8 +108,8 @@
 
 <span class="returntype"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
 <span class="name ">sealOpen</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="sealOpen-param-cipherText">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">cipherText</span>, </span></li>
-<li><span class="parameter" id="sealOpen-param-recipientPublicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">recipientPublicKey</span>, </span></li>
-<li><span class="parameter" id="sealOpen-param-recipientSecretKey"><span>required</span> <span class="type-annotation"><a href="../../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">recipientSecretKey</span>}</span></li>
+<li><span class="parameter" id="sealOpen-param-publicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">publicKey</span>, </span></li>
+<li><span class="parameter" id="sealOpen-param-secretKey"><span>required</span> <span class="type-annotation"><a href="../../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">secretKey</span>}</span></li>
 </ol>)
 
       
@@ -126,8 +127,8 @@
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">Uint8List sealOpen({
   required Uint8List cipherText,
-  required Uint8List recipientPublicKey,
-  required SecureKey recipientSecretKey,
+  required Uint8List publicKey,
+  required SecureKey secretKey,
 });</code></pre>
 </section>
 
@@ -142,7 +143,7 @@
 <footer>
   <span class="no-break">
     sodium
-      0.1.5
+      0.2.0
   </span>
 
   

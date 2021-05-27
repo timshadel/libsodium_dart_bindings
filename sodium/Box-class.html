@@ -65,6 +65,7 @@
   <li><a href="../sodium/GenericHash-class.html">GenericHash</a></li>
   <li><a href="../sodium/GenericHashConsumer-class.html">GenericHashConsumer</a></li>
   <li><a href="../sodium/KeyPair-class.html">KeyPair</a></li>
+  <li><a href="../sodium/PrecalculatedBox-class.html">PrecalculatedBox</a></li>
   <li><a href="../sodium/Pwhash-class.html">Pwhash</a></li>
   <li><a href="../sodium/Randombytes-class.html">Randombytes</a></li>
   <li><a href="../sodium/SecretBox-class.html">SecretBox</a></li>
@@ -223,7 +224,7 @@ Please refer to that documentation for more details about these APIs.</p>
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="detached" class="callable">
-  <span class="name"><a href="../sodium/Box/detached.html">detached</a></span><span class="signature">(<wbr><span class="parameter" id="detached-param-message">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="detached-param-nonce"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">nonce</span>, </span><span class="parameter" id="detached-param-recipientPublicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">recipientPublicKey</span>, </span><span class="parameter" id="detached-param-senderSecretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">senderSecretKey</span>}</span>)
+  <span class="name"><a href="../sodium/Box/detached.html">detached</a></span><span class="signature">(<wbr><span class="parameter" id="detached-param-message">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="detached-param-nonce"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">nonce</span>, </span><span class="parameter" id="detached-param-publicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">publicKey</span>, </span><span class="parameter" id="detached-param-secretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">secretKey</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="../sodium/DetachedCipherResult-class.html">DetachedCipherResult</a></span>
   </span>
   
@@ -236,7 +237,7 @@ Please refer to that documentation for more details about these APIs.</p>
 </dd>
 
         <dt id="easy" class="callable">
-  <span class="name"><a href="../sodium/Box/easy.html">easy</a></span><span class="signature">(<wbr><span class="parameter" id="easy-param-message">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="easy-param-nonce"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">nonce</span>, </span><span class="parameter" id="easy-param-recipientPublicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">recipientPublicKey</span>, </span><span class="parameter" id="easy-param-senderSecretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">senderSecretKey</span>}</span>)
+  <span class="name"><a href="../sodium/Box/easy.html">easy</a></span><span class="signature">(<wbr><span class="parameter" id="easy-param-message">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="easy-param-nonce"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">nonce</span>, </span><span class="parameter" id="easy-param-publicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">publicKey</span>, </span><span class="parameter" id="easy-param-secretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">secretKey</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
   </span>
   
@@ -275,7 +276,7 @@ Please refer to that documentation for more details about these APIs.</p>
 </dd>
 
         <dt id="openDetached" class="callable">
-  <span class="name"><a href="../sodium/Box/openDetached.html">openDetached</a></span><span class="signature">(<wbr><span class="parameter" id="openDetached-param-cipherText">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">cipherText</span>, </span><span class="parameter" id="openDetached-param-mac"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">mac</span>, </span><span class="parameter" id="openDetached-param-nonce"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">nonce</span>, </span><span class="parameter" id="openDetached-param-senderPublicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">senderPublicKey</span>, </span><span class="parameter" id="openDetached-param-recipientSecretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">recipientSecretKey</span>}</span>)
+  <span class="name"><a href="../sodium/Box/openDetached.html">openDetached</a></span><span class="signature">(<wbr><span class="parameter" id="openDetached-param-cipherText">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">cipherText</span>, </span><span class="parameter" id="openDetached-param-mac"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">mac</span>, </span><span class="parameter" id="openDetached-param-nonce"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">nonce</span>, </span><span class="parameter" id="openDetached-param-publicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">publicKey</span>, </span><span class="parameter" id="openDetached-param-secretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">secretKey</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
   </span>
   
@@ -288,7 +289,7 @@ Please refer to that documentation for more details about these APIs.</p>
 </dd>
 
         <dt id="openEasy" class="callable">
-  <span class="name"><a href="../sodium/Box/openEasy.html">openEasy</a></span><span class="signature">(<wbr><span class="parameter" id="openEasy-param-cipherText">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">cipherText</span>, </span><span class="parameter" id="openEasy-param-nonce"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">nonce</span>, </span><span class="parameter" id="openEasy-param-senderPublicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">senderPublicKey</span>, </span><span class="parameter" id="openEasy-param-recipientSecretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">recipientSecretKey</span>}</span>)
+  <span class="name"><a href="../sodium/Box/openEasy.html">openEasy</a></span><span class="signature">(<wbr><span class="parameter" id="openEasy-param-cipherText">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">cipherText</span>, </span><span class="parameter" id="openEasy-param-nonce"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">nonce</span>, </span><span class="parameter" id="openEasy-param-publicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">publicKey</span>, </span><span class="parameter" id="openEasy-param-secretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">secretKey</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
   </span>
   
@@ -300,8 +301,21 @@ Please refer to that documentation for more details about these APIs.</p>
 
 </dd>
 
+        <dt id="precalculate" class="callable">
+  <span class="name"><a href="../sodium/Box/precalculate.html">precalculate</a></span><span class="signature">(<wbr><span class="parameter" id="precalculate-param-publicKey">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">publicKey</span>, </span><span class="parameter" id="precalculate-param-secretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">secretKey</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="../sodium/PrecalculatedBox-class.html">PrecalculatedBox</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Provides crypto_box_beforenm. <a href="../sodium/Box/precalculate.html">[...]</a>
+  
+
+</dd>
+
         <dt id="seal" class="callable">
-  <span class="name"><a href="../sodium/Box/seal.html">seal</a></span><span class="signature">(<wbr><span class="parameter" id="seal-param-message">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="seal-param-recipientPublicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">recipientPublicKey</span>}</span>)
+  <span class="name"><a href="../sodium/Box/seal.html">seal</a></span><span class="signature">(<wbr><span class="parameter" id="seal-param-message">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">message</span>, </span><span class="parameter" id="seal-param-publicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">publicKey</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
   </span>
   
@@ -314,7 +328,7 @@ Please refer to that documentation for more details about these APIs.</p>
 </dd>
 
         <dt id="sealOpen" class="callable">
-  <span class="name"><a href="../sodium/Box/sealOpen.html">sealOpen</a></span><span class="signature">(<wbr><span class="parameter" id="sealOpen-param-cipherText">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">cipherText</span>, </span><span class="parameter" id="sealOpen-param-recipientPublicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">recipientPublicKey</span>, </span><span class="parameter" id="sealOpen-param-recipientSecretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">recipientSecretKey</span>}</span>)
+  <span class="name"><a href="../sodium/Box/sealOpen.html">sealOpen</a></span><span class="signature">(<wbr><span class="parameter" id="sealOpen-param-cipherText">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">cipherText</span>, </span><span class="parameter" id="sealOpen-param-publicKey"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">publicKey</span>, </span><span class="parameter" id="sealOpen-param-secretKey"><span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">secretKey</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
   </span>
   
@@ -403,6 +417,7 @@ Please refer to that documentation for more details about these APIs.</p>
     <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../sodium/Box/openDetached.html">openDetached</a></li>
     <li><a href="../sodium/Box/openEasy.html">openEasy</a></li>
+    <li><a href="../sodium/Box/precalculate.html">precalculate</a></li>
     <li><a href="../sodium/Box/seal.html">seal</a></li>
     <li><a href="../sodium/Box/sealOpen.html">sealOpen</a></li>
     <li><a href="../sodium/Box/seedKeyPair.html">seedKeyPair</a></li>
@@ -423,7 +438,7 @@ Please refer to that documentation for more details about these APIs.</p>
 <footer>
   <span class="no-break">
     sodium
-      0.1.5
+      0.2.0
   </span>
 
   
