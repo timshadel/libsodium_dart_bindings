@@ -67,6 +67,7 @@
   <li><a href="../sodium/GenericHashConsumer-class.html">GenericHashConsumer</a></li>
   <li><a href="../sodium/Kdf-class.html">Kdf</a></li>
   <li><a href="../sodium/KeyPair-class.html">KeyPair</a></li>
+  <li><a href="../sodium/Kx-class.html">Kx</a></li>
   <li><a href="../sodium/PrecalculatedBox-class.html">PrecalculatedBox</a></li>
   <li><a href="../sodium/Pwhash-class.html">Pwhash</a></li>
   <li><a href="../sodium/Randombytes-class.html">Randombytes</a></li>
@@ -77,6 +78,7 @@
   <li><a href="../sodium/SecretStreamCipherMessage-class.html">SecretStreamCipherMessage</a></li>
   <li><a href="../sodium/SecretStreamPlainMessage-class.html">SecretStreamPlainMessage</a></li>
   <li><a href="../sodium/SecureKey-class.html">SecureKey</a></li>
+  <li><a href="../sodium/SessionKeys-class.html">SessionKeys</a></li>
   <li><a href="../sodium/ShortHash-class.html">ShortHash</a></li>
   <li><a href="../sodium/Sign-class.html">Sign</a></li>
   <li><a href="../sodium/SignatureConsumer-class.html">SignatureConsumer</a></li>
@@ -151,21 +153,21 @@ convenience.</p>
 
       <dl class="constructor-summary-list">
         <dt id="SecureKey" class="callable">
-          <span class="name"><a href="../sodium/SecureKey/SecureKey.html">SecureKey</a></span><span class="signature">(<span class="parameter" id="-param-sodium"><span class="type-annotation"><a href="../sodium/Sodium-class.html">Sodium</a></span> <span class="parameter-name">sodium</span>, </span><span class="parameter" id="-param-length"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> <span class="parameter-name">length</span></span>)</span>
+          <span class="name"><a href="../sodium/SecureKey/SecureKey.html">SecureKey</a></span><span class="signature">(<span class="parameter" id="-param-sodium"><span class="type-annotation"><a href="../sodium/Sodium-class.html">Sodium</a></span> <span class="parameter-name">sodium</span>, </span><span class="parameter" id="-param-length"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">length</span></span>)</span>
         </dt>
         <dd>
           Allocates a new <a href="../sodium/SecureKey-class.html">SecureKey</a> of <code>length</code> bytes. <a href="../sodium/SecureKey/SecureKey.html">[...]</a>
           <div class="constructor-modifier features">factory</div>
         </dd>
         <dt id="SecureKey.fromList" class="callable">
-          <span class="name"><a href="../sodium/SecureKey/SecureKey.fromList.html">SecureKey.fromList</a></span><span class="signature">(<span class="parameter" id="fromList-param-sodium"><span class="type-annotation"><a href="../sodium/Sodium-class.html">Sodium</a></span> <span class="parameter-name">sodium</span>, </span><span class="parameter" id="fromList-param-data"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">data</span></span>)</span>
+          <span class="name"><a href="../sodium/SecureKey/SecureKey.fromList.html">SecureKey.fromList</a></span><span class="signature">(<span class="parameter" id="fromList-param-sodium"><span class="type-annotation"><a href="../sodium/Sodium-class.html">Sodium</a></span> <span class="parameter-name">sodium</span>, </span><span class="parameter" id="fromList-param-data"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-typed_data/Uint8List-class.html">Uint8List</a></span> <span class="parameter-name">data</span></span>)</span>
         </dt>
         <dd>
           Allocates new memory for a <a href="../sodium/SecureKey-class.html">SecureKey</a> and copies the data from <code>data</code>. <a href="../sodium/SecureKey/SecureKey.fromList.html">[...]</a>
           <div class="constructor-modifier features">factory</div>
         </dd>
         <dt id="SecureKey.random" class="callable">
-          <span class="name"><a href="../sodium/SecureKey/SecureKey.random.html">SecureKey.random</a></span><span class="signature">(<span class="parameter" id="random-param-sodium"><span class="type-annotation"><a href="../sodium/Sodium-class.html">Sodium</a></span> <span class="parameter-name">sodium</span>, </span><span class="parameter" id="random-param-length"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> <span class="parameter-name">length</span></span>)</span>
+          <span class="name"><a href="../sodium/SecureKey/SecureKey.random.html">SecureKey.random</a></span><span class="signature">(<span class="parameter" id="random-param-sodium"><span class="type-annotation"><a href="../sodium/Sodium-class.html">Sodium</a></span> <span class="parameter-name">sodium</span>, </span><span class="parameter" id="random-param-length"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">length</span></span>)</span>
         </dt>
         <dd>
           Allocates new memory for a <a href="../sodium/SecureKey-class.html">SecureKey</a> and fills it with <code>length</code> bytes of
@@ -180,19 +182,19 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
 
       <dl class="properties">
         <dt id="hashCode" class="property inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/hashCode.html">hashCode</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> 
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
 
 </dt>
 <dd class="inherited">
-  The hash code for this object. <a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/hashCode.html">[...]</a>
+  The hash code for this object. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">[...]</a>
   <div class="features">read-only, inherited</div>
 
 </dd>
 
         <dt id="length" class="property">
   <span class="name"><a href="../sodium/SecureKey/length.html">length</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> 
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
 
 </dt>
 <dd>
@@ -202,8 +204,8 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
 </dd>
 
         <dt id="runtimeType" class="property inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/runtimeType.html">runtimeType</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/Type-class.html">Type</a></span> 
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/Type-class.html">Type</a></span> 
 
 </dt>
 <dd class="inherited">
@@ -246,7 +248,7 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
 
         <dt id="extractBytes" class="callable">
   <span class="name"><a href="../sodium/SecureKey/extractBytes.html">extractBytes</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-typed_data/Uint8List-class.html">Uint8List</a></span>
   </span>
   
 
@@ -258,21 +260,21 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
 </dd>
 
         <dt id="noSuchMethod" class="callable inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
     <span class="returntype parameter">&#8594; dynamic</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">[...]</a>
+  Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">[...]</a>
   <div class="features">inherited</div>
 
 </dd>
 
         <dt id="runUnlockedAsync" class="callable">
-  <span class="name"><a href="../sodium/SecureKey/runUnlockedAsync.html">runUnlockedAsync</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="runUnlockedAsync-param-callback"><span class="type-annotation"><a href="../sodium/SecureCallbackFn.html">SecureCallbackFn</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.13.1/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="runUnlockedAsync-param-writable">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">writable</span> = <span class="default-value">false</span>}</span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  <span class="name"><a href="../sodium/SecureKey/runUnlockedAsync.html">runUnlockedAsync</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="runUnlockedAsync-param-callback"><span class="type-annotation"><a href="../sodium/SecureCallbackFn.html">SecureCallbackFn</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.13.3/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="runUnlockedAsync-param-writable">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">writable</span> = <span class="default-value">false</span>}</span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-async/FutureOr-class.html">FutureOr</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
   </span>
   
 
@@ -284,7 +286,7 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
 </dd>
 
         <dt id="runUnlockedSync" class="callable">
-  <span class="name"><a href="../sodium/SecureKey/runUnlockedSync.html">runUnlockedSync</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="runUnlockedSync-param-callback"><span class="type-annotation"><a href="../sodium/SecureCallbackFn.html">SecureCallbackFn</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="runUnlockedSync-param-writable">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">writable</span> = <span class="default-value">false</span>}</span>)
+  <span class="name"><a href="../sodium/SecureKey/runUnlockedSync.html">runUnlockedSync</a></span><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="runUnlockedSync-param-callback"><span class="type-annotation"><a href="../sodium/SecureCallbackFn.html">SecureCallbackFn</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">callback</span>, </span><span class="parameter" id="runUnlockedSync-param-writable">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">writable</span> = <span class="default-value">false</span>}</span>)
     <span class="returntype parameter">&#8594; T</span>
   </span>
   
@@ -297,14 +299,14 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
 </dd>
 
         <dt id="toString" class="callable inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/String-class.html">String</a></span>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/String-class.html">String</a></span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  A string representation of this object. <a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/toString.html">[...]</a>
+  A string representation of this object. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">[...]</a>
   <div class="features">inherited</div>
 
 </dd>
@@ -316,14 +318,14 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
       <h2>Operators</h2>
       <dl class="callables">
         <dt id="operator ==" class="callable inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/bool-class.html">bool</a></span>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/bool-class.html">bool</a></span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  The equality operator. <a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/operator_equals.html">[...]</a>
+  The equality operator. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">[...]</a>
   <div class="features">inherited</div>
 
 </dd>
@@ -348,21 +350,21 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
     <li class="section-title">
       <a href="../sodium/SecureKey-class.html#instance-properties">Properties</a>
     </li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">hashCode</a></li>
     <li><a href="../sodium/SecureKey/length.html">length</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/runtimeType.html">runtimeType</a></li>
 
     <li class="section-title"><a href="../sodium/SecureKey-class.html#instance-methods">Methods</a></li>
     <li><a href="../sodium/SecureKey/copy.html">copy</a></li>
     <li><a href="../sodium/SecureKey/dispose.html">dispose</a></li>
     <li><a href="../sodium/SecureKey/extractBytes.html">extractBytes</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../sodium/SecureKey/runUnlockedAsync.html">runUnlockedAsync</a></li>
     <li><a href="../sodium/SecureKey/runUnlockedSync.html">runUnlockedSync</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/toString.html">toString</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">toString</a></li>
 
     <li class="section-title inherited"><a href="../sodium/SecureKey-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/operator_equals.html">operator ==</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">operator ==</a></li>
 
 
 
@@ -376,7 +378,7 @@ random data. <a href="../sodium/SecureKey/SecureKey.random.html">[...]</a>
 <footer>
   <span class="no-break">
     sodium
-      0.2.2
+      0.2.3
   </span>
 
   

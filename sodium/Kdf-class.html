@@ -67,6 +67,7 @@
   <li><a href="../sodium/GenericHashConsumer-class.html">GenericHashConsumer</a></li>
   <li><a href="../sodium/Kdf-class.html">Kdf</a></li>
   <li><a href="../sodium/KeyPair-class.html">KeyPair</a></li>
+  <li><a href="../sodium/Kx-class.html">Kx</a></li>
   <li><a href="../sodium/PrecalculatedBox-class.html">PrecalculatedBox</a></li>
   <li><a href="../sodium/Pwhash-class.html">Pwhash</a></li>
   <li><a href="../sodium/Randombytes-class.html">Randombytes</a></li>
@@ -77,6 +78,7 @@
   <li><a href="../sodium/SecretStreamCipherMessage-class.html">SecretStreamCipherMessage</a></li>
   <li><a href="../sodium/SecretStreamPlainMessage-class.html">SecretStreamPlainMessage</a></li>
   <li><a href="../sodium/SecureKey-class.html">SecureKey</a></li>
+  <li><a href="../sodium/SessionKeys-class.html">SessionKeys</a></li>
   <li><a href="../sodium/ShortHash-class.html">ShortHash</a></li>
   <li><a href="../sodium/Sign-class.html">Sign</a></li>
   <li><a href="../sodium/SignatureConsumer-class.html">SignatureConsumer</a></li>
@@ -133,7 +135,7 @@ Please refer to that documentation for more details about these APIs.</p>
       <dl class="properties">
         <dt id="bytesMax" class="property">
   <span class="name"><a href="../sodium/Kdf/bytesMax.html">bytesMax</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> 
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
 
 </dt>
 <dd>
@@ -144,7 +146,7 @@ Please refer to that documentation for more details about these APIs.</p>
 
         <dt id="bytesMin" class="property">
   <span class="name"><a href="../sodium/Kdf/bytesMin.html">bytesMin</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> 
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
 
 </dt>
 <dd>
@@ -155,7 +157,7 @@ Please refer to that documentation for more details about these APIs.</p>
 
         <dt id="contextBytes" class="property">
   <span class="name"><a href="../sodium/Kdf/contextBytes.html">contextBytes</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> 
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
 
 </dt>
 <dd>
@@ -165,19 +167,19 @@ Please refer to that documentation for more details about these APIs.</p>
 </dd>
 
         <dt id="hashCode" class="property inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/hashCode.html">hashCode</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> 
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
 
 </dt>
 <dd class="inherited">
-  The hash code for this object. <a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/hashCode.html">[...]</a>
+  The hash code for this object. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">[...]</a>
   <div class="features">read-only, inherited</div>
 
 </dd>
 
         <dt id="keyBytes" class="property">
   <span class="name"><a href="../sodium/Kdf/keyBytes.html">keyBytes</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> 
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
 
 </dt>
 <dd>
@@ -187,8 +189,8 @@ Please refer to that documentation for more details about these APIs.</p>
 </dd>
 
         <dt id="runtimeType" class="property inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/runtimeType.html">runtimeType</a></span>
-  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/Type-class.html">Type</a></span> 
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/Type-class.html">Type</a></span> 
 
 </dt>
 <dd class="inherited">
@@ -204,7 +206,7 @@ Please refer to that documentation for more details about these APIs.</p>
       <h2>Methods</h2>
       <dl class="callables">
         <dt id="deriveFromKey" class="callable">
-  <span class="name"><a href="../sodium/Kdf/deriveFromKey.html">deriveFromKey</a></span><span class="signature">(<wbr><span class="parameter" id="deriveFromKey-param-masterKey">{<span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">masterKey</span>, </span><span class="parameter" id="deriveFromKey-param-context"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/String-class.html">String</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="deriveFromKey-param-subkeyId"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> <span class="parameter-name">subkeyId</span>, </span><span class="parameter" id="deriveFromKey-param-subkeyLen"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/int-class.html">int</a></span> <span class="parameter-name">subkeyLen</span>}</span>)
+  <span class="name"><a href="../sodium/Kdf/deriveFromKey.html">deriveFromKey</a></span><span class="signature">(<wbr><span class="parameter" id="deriveFromKey-param-masterKey">{<span>required</span> <span class="type-annotation"><a href="../sodium/SecureKey-class.html">SecureKey</a></span> <span class="parameter-name">masterKey</span>, </span><span class="parameter" id="deriveFromKey-param-context"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/String-class.html">String</a></span> <span class="parameter-name">context</span>, </span><span class="parameter" id="deriveFromKey-param-subkeyId"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">subkeyId</span>, </span><span class="parameter" id="deriveFromKey-param-subkeyLen"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">subkeyLen</span>}</span>)
     <span class="returntype parameter">&#8594; <a href="../sodium/SecureKey-class.html">SecureKey</a></span>
   </span>
   
@@ -230,27 +232,27 @@ Please refer to that documentation for more details about these APIs.</p>
 </dd>
 
         <dt id="noSuchMethod" class="callable inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
     <span class="returntype parameter">&#8594; dynamic</span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">[...]</a>
+  Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">[...]</a>
   <div class="features">inherited</div>
 
 </dd>
 
         <dt id="toString" class="callable inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
-    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/String-class.html">String</a></span>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/String-class.html">String</a></span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  A string representation of this object. <a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/toString.html">[...]</a>
+  A string representation of this object. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">[...]</a>
   <div class="features">inherited</div>
 
 </dd>
@@ -262,14 +264,14 @@ Please refer to that documentation for more details about these APIs.</p>
       <h2>Operators</h2>
       <dl class="callables">
         <dt id="operator ==" class="callable inherited">
-  <span class="name"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
-    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.1/dart-core/bool-class.html">bool</a></span>
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/bool-class.html">bool</a></span>
   </span>
   
 
 </dt>
 <dd class="inherited">
-  The equality operator. <a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/operator_equals.html">[...]</a>
+  The equality operator. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">[...]</a>
   <div class="features">inherited</div>
 
 </dd>
@@ -293,18 +295,18 @@ Please refer to that documentation for more details about these APIs.</p>
     <li><a href="../sodium/Kdf/bytesMax.html">bytesMax</a></li>
     <li><a href="../sodium/Kdf/bytesMin.html">bytesMin</a></li>
     <li><a href="../sodium/Kdf/contextBytes.html">contextBytes</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">hashCode</a></li>
     <li><a href="../sodium/Kdf/keyBytes.html">keyBytes</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/runtimeType.html">runtimeType</a></li>
 
     <li class="section-title"><a href="../sodium/Kdf-class.html#instance-methods">Methods</a></li>
     <li><a href="../sodium/Kdf/deriveFromKey.html">deriveFromKey</a></li>
     <li><a href="../sodium/Kdf/keygen.html">keygen</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/toString.html">toString</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">toString</a></li>
 
     <li class="section-title inherited"><a href="../sodium/Kdf-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/operator_equals.html">operator ==</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">operator ==</a></li>
 
 
 
@@ -318,7 +320,7 @@ Please refer to that documentation for more details about these APIs.</p>
 <footer>
   <span class="no-break">
     sodium
-      0.2.2
+      0.2.3
   </span>
 
   

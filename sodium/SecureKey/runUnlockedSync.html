@@ -69,21 +69,21 @@
     <li class="section-title">
       <a href="../../sodium/SecureKey-class.html#instance-properties">Properties</a>
     </li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">hashCode</a></li>
     <li><a href="../../sodium/SecureKey/length.html">length</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/runtimeType.html">runtimeType</a></li>
 
     <li class="section-title"><a href="../../sodium/SecureKey-class.html#instance-methods">Methods</a></li>
     <li><a href="../../sodium/SecureKey/copy.html">copy</a></li>
     <li><a href="../../sodium/SecureKey/dispose.html">dispose</a></li>
     <li><a href="../../sodium/SecureKey/extractBytes.html">extractBytes</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../../sodium/SecureKey/runUnlockedAsync.html">runUnlockedAsync</a></li>
     <li><a href="../../sodium/SecureKey/runUnlockedSync.html">runUnlockedSync</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/toString.html">toString</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">toString</a></li>
 
     <li class="section-title inherited"><a href="../../sodium/SecureKey-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.1/dart-core/Object/operator_equals.html">operator ==</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">operator ==</a></li>
 
 
 
@@ -103,7 +103,7 @@
 
 <span class="returntype">T</span>
 <span class="name ">runUnlockedSync</span>&lt;<wbr><span class="type-parameter">T</span>&gt;(<wbr><ol class="parameter-list"><li><span class="parameter" id="runUnlockedSync-param-callback"><span class="type-annotation"><a href="../../sodium/SecureCallbackFn.html">SecureCallbackFn</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">callback</span>, </span></li>
-<li><span class="parameter" id="runUnlockedSync-param-writable">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.1/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">writable</span> = <span class="default-value">false</span>}</span></li>
+<li><span class="parameter" id="runUnlockedSync-param-writable">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">writable</span> = <span class="default-value">false</span>}</span></li>
 </ol>)
 
       
@@ -114,7 +114,7 @@
   <p>Runs the given callback with the unlocked key data.</p>
 <p>This method first unlocks the memory, allowing read-only (or read-write,
 if <code>writable</code> is set to true) access to the memory. It then calls the
-given <code>callback</code> with a <a href="https://api.dart.dev/stable/2.13.1/dart-typed_data/Uint8List-class.html">Uint8List</a> view of the data. This means, if you
+given <code>callback</code> with a <a href="https://api.dart.dev/stable/2.13.3/dart-typed_data/Uint8List-class.html">Uint8List</a> view of the data. This means, if you
 modify the byte array, the data of the underlying key gets modified as
 well. The callback must complete synchronously, as right after it has
 finished, the key will be locked again, preventing further access to it.</p>
@@ -143,7 +143,7 @@ callback.</p>
 <footer>
   <span class="no-break">
     sodium
-      0.2.2
+      0.2.3
   </span>
 
   
