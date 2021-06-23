@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the SodiumPointer class from the sodium.ffi library, for the Dart programming language.">
+  <title>SodiumPointer class - sodium.ffi library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../static-assets/github.css">
+  <link rel="stylesheet" href="../static-assets/styles.css">
+  <link rel="icon" href="../static-assets/favicon.png">
+
+  
+</head>
+
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">sodium</a></li>
+    <li><a href="../sodium.ffi/sodium.ffi-library.html">sodium.ffi</a></li>
+    <li class="self-crumb">SodiumPointer<span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="https://api.dart.dev/stable/2.13.3/dart-ffi/NativeType-class.html">NativeType</a></span>&gt;</span> class</li>
+  </ol>
+  <div class="self-name">SodiumPointer</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">sodium</a></li>
+  <li><a href="../sodium.ffi/sodium.ffi-library.html">sodium.ffi</a></li>
+  <li class="self-crumb">SodiumPointer<span class="signature">&lt;<wbr><span class="type-parameter">T extends <a href="https://api.dart.dev/stable/2.13.3/dart-ffi/NativeType-class.html">NativeType</a></span>&gt;</span> class</li>
+</ol>
+
+
+    <h5>sodium.ffi library</h5>
+    <ol>
+  <li class="section-title"><a href="../sodium.ffi/sodium.ffi-library.html#classes">Classes</a></li>
+  <li><a href="../sodium.ffi/SodiumAllocator-class.html">SodiumAllocator</a></li>
+  <li><a href="../sodium.ffi/SodiumInit-class.html">SodiumInit</a></li>
+  <li><a href="../sodium.ffi/SodiumPointer-class.html">SodiumPointer</a></li>
+
+  <li class="section-title"><a href="../sodium.ffi/sodium.ffi-library.html#extension">Extensions</a></li>
+  <li><a href="../sodium.ffi/DoubleSodiumList.html">DoubleSodiumList</a></li>
+  <li><a href="../sodium.ffi/DoubleSodiumPtr.html">DoubleSodiumPtr</a></li>
+  <li><a href="../sodium.ffi/FloatSodiumList.html">FloatSodiumList</a></li>
+  <li><a href="../sodium.ffi/FloatSodiumPtr.html">FloatSodiumPtr</a></li>
+  <li><a href="../sodium.ffi/Int8SodiumList.html">Int8SodiumList</a></li>
+  <li><a href="../sodium.ffi/Int8SodiumPtr.html">Int8SodiumPtr</a></li>
+  <li><a href="../sodium.ffi/Int16SodiumList.html">Int16SodiumList</a></li>
+  <li><a href="../sodium.ffi/Int16SodiumPtr.html">Int16SodiumPtr</a></li>
+  <li><a href="../sodium.ffi/Int32SodiumList.html">Int32SodiumList</a></li>
+  <li><a href="../sodium.ffi/Int32SodiumPtr.html">Int32SodiumPtr</a></li>
+  <li><a href="../sodium.ffi/Int64SodiumList.html">Int64SodiumList</a></li>
+  <li><a href="../sodium.ffi/Int64SodiumPtr.html">Int64SodiumPtr</a></li>
+  <li><a href="../sodium.ffi/SodiumString.html">SodiumString</a></li>
+  <li><a href="../sodium.ffi/Uint8SodiumList.html">Uint8SodiumList</a></li>
+  <li><a href="../sodium.ffi/Uint8SodiumPtr.html">Uint8SodiumPtr</a></li>
+  <li><a href="../sodium.ffi/Uint16SodiumList.html">Uint16SodiumList</a></li>
+  <li><a href="../sodium.ffi/Uint16SodiumPtr.html">Uint16SodiumPtr</a></li>
+  <li><a href="../sodium.ffi/Uint32SodiumList.html">Uint32SodiumList</a></li>
+  <li><a href="../sodium.ffi/Uint32SodiumPtr.html">Uint32SodiumPtr</a></li>
+  <li><a href="../sodium.ffi/Uint64SodiumList.html">Uint64SodiumList</a></li>
+  <li><a href="../sodium.ffi/Uint64SodiumPtr.html">Uint64SodiumPtr</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../sodium.ffi/sodium.ffi-library.html#enums">Enums</a></li>
+  <li><a href="../sodium.ffi/MemoryProtection-class.html">MemoryProtection</a></li>
+
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">SodiumPointer&lt;<wbr><span class="type-parameter">T extends NativeType</span>&gt;</span> class 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ 
+</h1></div>
+
+    
+<section class="desc markdown">
+  <p>A C-Pointer wrapper that uses the memory utilities of libsodium.</p>
+<p>See <a href="https://libsodium.gitbook.io/doc/memory_management">https://libsodium.gitbook.io/doc/memory_management</a></p>
+</section>
+
+
+    <section>
+      <dl class="dl-horizontal">
+
+
+
+
+        <dt>Available Extensions</dt>
+        <dd><ul class="comma-separated clazz-relationships">
+          <li><a href="../sodium.ffi/DoubleSodiumPtr.html">DoubleSodiumPtr</a></li>
+          <li><a href="../sodium.ffi/FloatSodiumPtr.html">FloatSodiumPtr</a></li>
+          <li><a href="../sodium.ffi/Int8SodiumPtr.html">Int8SodiumPtr</a></li>
+          <li><a href="../sodium.ffi/Int16SodiumPtr.html">Int16SodiumPtr</a></li>
+          <li><a href="../sodium.ffi/Int32SodiumPtr.html">Int32SodiumPtr</a></li>
+          <li><a href="../sodium.ffi/Int64SodiumPtr.html">Int64SodiumPtr</a></li>
+          <li><a href="../sodium.ffi/Uint8SodiumPtr.html">Uint8SodiumPtr</a></li>
+          <li><a href="../sodium.ffi/Uint16SodiumPtr.html">Uint16SodiumPtr</a></li>
+          <li><a href="../sodium.ffi/Uint32SodiumPtr.html">Uint32SodiumPtr</a></li>
+          <li><a href="../sodium.ffi/Uint64SodiumPtr.html">Uint64SodiumPtr</a></li>
+        </ul></dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="SodiumPointer.alloc" class="callable">
+          <span class="name"><a href="../sodium.ffi/SodiumPointer/SodiumPointer.alloc.html">SodiumPointer.alloc</a></span><span class="signature">(<span class="parameter" id="alloc-param-sodium"><span class="type-annotation">LibSodiumFFI</span> <span class="parameter-name">sodium</span>, </span><span class="parameter" id="alloc-param-count">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span> = <span class="default-value">1</span>, </span><span class="parameter" id="alloc-param-memoryProtection"><span class="type-annotation"><a href="../sodium.ffi/MemoryProtection-class.html">MemoryProtection</a></span> <span class="parameter-name">memoryProtection</span> = <span class="default-value">MemoryProtection.readWrite</span>, </span><span class="parameter" id="alloc-param-zeroMemory"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">zeroMemory</span> = <span class="default-value">false</span>}</span>)</span>
+        </dt>
+        <dd>
+          Allocates new memory using the libsodium APIs. <a href="../sodium.ffi/SodiumPointer/SodiumPointer.alloc.html">[...]</a>
+          <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="SodiumPointer.raw" class="callable">
+          <span class="name"><a href="../sodium.ffi/SodiumPointer/SodiumPointer.raw.html">SodiumPointer.raw</a></span><span class="signature">(<span class="parameter" id="raw-param-sodium"><span class="type-annotation">LibSodiumFFI</span> <span class="parameter-name">sodium</span>, </span><span class="parameter" id="raw-param-ptr"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">ptr</span>, </span><span class="parameter" id="raw-param-count"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">count</span></span>)</span>
+        </dt>
+        <dd>
+          Constructs the pointer from the lib<code>sodium</code> API, the raw <code>ptr</code> and the
+element <code>count</code>. 
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="byteLength" class="property">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/byteLength.html">byteLength</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The total number of bytes this pointer is long 
+  <div class="features">read-only</div>
+
+</dd>
+
+        <dt id="count" class="property">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/count.html">count</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The number of elements this pointer is pointing to 
+  <div class="features">final</div>
+
+</dd>
+
+        <dt id="elementSize" class="property">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/elementSize.html">elementSize</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd>
+  The number of bytes a single element of T is wide. <a href="../sodium.ffi/SodiumPointer/elementSize.html">[...]</a>
+  <div class="features">read-only</div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">[...]</a>
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="locked" class="property">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/locked.html">locked</a></span>
+  <span class="signature">&#8596; <a href="https://api.dart.dev/stable/2.13.3/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Controlls whether the pointer is locked in memory or not. <a href="../sodium.ffi/SodiumPointer/locked.html">[...]</a>
+  <div class="features">read / write</div>
+
+</dd>
+
+        <dt id="memoryProtection" class="property">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/memoryProtection.html">memoryProtection</a></span>
+  <span class="signature">&#8596; <a href="../sodium.ffi/MemoryProtection-class.html">MemoryProtection</a></span> 
+
+</dt>
+<dd>
+  Controlls the memory protection level of the allocated memory <a href="../sodium.ffi/SodiumPointer/memoryProtection.html">[...]</a>
+  <div class="features">read / write</div>
+
+</dd>
+
+        <dt id="ptr" class="property">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/ptr.html">ptr</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-ffi/Pointer-class.html">Pointer</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> 
+
+</dt>
+<dd>
+  The underlying native C pointer 
+  <div class="features">final</div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object. 
+  <div class="features">read-only, inherited</div>
+
+</dd>
+
+        <dt id="sodium" class="property">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/sodium.html">sodium</a></span>
+  <span class="signature">&#8594; LibSodiumFFI</span> 
+
+</dt>
+<dd>
+  libsodium bindings used to access the C API 
+  <div class="features">final</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="dispose" class="callable">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/dispose.html">dispose</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Disposes the pointer and frees the allocated memory. <a href="../sodium.ffi/SodiumPointer/dispose.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="fill" class="callable">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/fill.html">fill</a></span><span class="signature">(<wbr><span class="parameter" id="fill-param-data"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/stable/2.13.3/dart-core/num-class.html">num</a></span>&gt;</span></span> <span class="parameter-name">data</span>, </span><span class="parameter" id="fill-param-offset">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">offset</span> = <span class="default-value">0</span>}</span>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Fills an area of the memory with the given data. <a href="../sodium.ffi/SodiumPointer/fill.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">[...]</a>
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">[...]</a>
+  <div class="features">inherited</div>
+
+</dd>
+
+        <dt id="viewAt" class="callable">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/viewAt.html">viewAt</a></span><span class="signature">(<wbr><span class="parameter" id="viewAt-param-offset"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a></span> <span class="parameter-name">offset</span>, </span><span class="parameter" id="viewAt-param-length">[<span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">length</span>]</span>)
+    <span class="returntype parameter">&#8594; <a href="../sodium.ffi/SodiumPointer-class.html">SodiumPointer</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Returns a view of a subset of the memory the pointer is pointing to. <a href="../sodium.ffi/SodiumPointer/viewAt.html">[...]</a>
+  
+
+</dd>
+
+        <dt id="zeroMemory" class="callable">
+  <span class="name"><a href="../sodium.ffi/SodiumPointer/zeroMemory.html">zeroMemory</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; void</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Provides sodium_memzero <a href="../sodium.ffi/SodiumPointer/zeroMemory.html">[...]</a>
+  
+
+</dd>
+
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/stable/2.13.3/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator. <a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">[...]</a>
+  <div class="features">inherited</div>
+
+</dd>
+
+      </dl>
+    </section>
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+    <li class="section-title"><a href="../sodium.ffi/SodiumPointer-class.html#constructors">Constructors</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/SodiumPointer.alloc.html">alloc</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/SodiumPointer.raw.html">raw</a></li>
+
+
+    <li class="section-title">
+      <a href="../sodium.ffi/SodiumPointer-class.html#instance-properties">Properties</a>
+    </li>
+    <li><a href="../sodium.ffi/SodiumPointer/byteLength.html">byteLength</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/count.html">count</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/elementSize.html">elementSize</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/locked.html">locked</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/memoryProtection.html">memoryProtection</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/ptr.html">ptr</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/sodium.html">sodium</a></li>
+
+    <li class="section-title"><a href="../sodium.ffi/SodiumPointer-class.html#instance-methods">Methods</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/dispose.html">dispose</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/fill.html">fill</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/toString.html">toString</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/viewAt.html">viewAt</a></li>
+    <li><a href="../sodium.ffi/SodiumPointer/zeroMemory.html">zeroMemory</a></li>
+
+    <li class="section-title inherited"><a href="../sodium.ffi/SodiumPointer-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/stable/2.13.3/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    sodium
+      0.2.4
+  </span>
+
+  
+</footer>
+
+
+<script src="../static-assets/highlight.pack.js"></script>
+<script src="../static-assets/script.js"></script>
+
+
+
+</body>
+
+</html>
+
