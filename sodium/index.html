@@ -119,9 +119,16 @@ later. APIs that are not listet yet have either been forgotten or are not
 planned. If you find one you would like to have made available, please create an
 issue for it, and I will add it to the list.</p>
 <p>API based on libsodium version: <em>1.0.18</em></p>
-<table><thead><tr><th>libsodium API</th><th>VM</th><th>JS</th><th>Documentation</th></tr></thead><tbody><tr><td>padding</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/padding">https://libsodium.gitbook.io/doc/padding</a></td></tr><tr><td>memory</td><td>✔️</td><td>❌</td><td><a href="https://libsodium.gitbook.io/doc/memory_management">https://libsodium.gitbook.io/doc/memory_management</a></td></tr><tr><td>randombytes</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/generating_random_data">https://libsodium.gitbook.io/doc/generating_random_data</a></td></tr><tr><td>crypto_secretbox</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox">https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox</a></td></tr><tr><td>crypto_secretstream</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretstream">https://libsodium.gitbook.io/doc/secret-key_cryptography/secretstream</a></td></tr><tr><td>crypto_aead</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/aead">https://libsodium.gitbook.io/doc/secret-key_cryptography/aead</a></td></tr><tr><td>crypto_auth</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secret-key_authentication">https://libsodium.gitbook.io/doc/secret-key_cryptography/secret-key_authentication</a></td></tr><tr><td>crypto_box</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/authenticated_encryption">https://libsodium.gitbook.io/doc/public-key_cryptography/authenticated_encryption</a></td></tr><tr><td>crypto_sign</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures">https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures</a></td></tr><tr><td>crypto_box_seal</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes">https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes</a></td></tr><tr><td>crypto_generichash</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/hashing/generic_hashing">https://libsodium.gitbook.io/doc/hashing/generic_hashing</a></td></tr><tr><td>crypto_shorthash</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/hashing/short-input_hashing">https://libsodium.gitbook.io/doc/hashing/short-input_hashing</a></td></tr><tr><td>crypto_pwhash</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/password_hashing/default_phf">https://libsodium.gitbook.io/doc/password_hashing/default_phf</a></td></tr><tr><td>crypto_kdf</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/key_derivation">https://libsodium.gitbook.io/doc/key_derivation</a></td></tr><tr><td>crypto_kx</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/key_exchange">https://libsodium.gitbook.io/doc/key_exchange</a></td></tr><tr><td>crypto_onetimeauth</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/poly1305">https://libsodium.gitbook.io/doc/advanced/poly1305</a></td></tr><tr><td>crypto_scalarmult</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/scalar_multiplication">https://libsodium.gitbook.io/doc/advanced/scalar_multiplication</a></td></tr><tr><td>crypto_hash_sha</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/sha-2_hash_function">https://libsodium.gitbook.io/doc/advanced/sha-2_hash_function</a></td></tr><tr><td>crypto_auth_hmacsha</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/hmac-sha2">https://libsodium.gitbook.io/doc/advanced/hmac-sha2</a></td></tr></tbody></table>
+<table><thead><tr><th>libsodium API</th><th>VM</th><th>JS</th><th>Documentation</th></tr></thead><tbody><tr><td>padding</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/padding">https://libsodium.gitbook.io/doc/padding</a></td></tr><tr><td>memory</td><td>✔️</td><td>❌</td><td><a href="https://libsodium.gitbook.io/doc/memory_management">https://libsodium.gitbook.io/doc/memory_management</a></td></tr><tr><td>randombytes</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/generating_random_data">https://libsodium.gitbook.io/doc/generating_random_data</a></td></tr><tr><td>crypto_secretbox</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox">https://libsodium.gitbook.io/doc/secret-key_cryptography/secretbox</a></td></tr><tr><td>crypto_secretstream</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secretstream">https://libsodium.gitbook.io/doc/secret-key_cryptography/secretstream</a></td></tr><tr><td>crypto_aead</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/aead">https://libsodium.gitbook.io/doc/secret-key_cryptography/aead</a></td></tr><tr><td>crypto_auth</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/secret-key_cryptography/secret-key_authentication">https://libsodium.gitbook.io/doc/secret-key_cryptography/secret-key_authentication</a></td></tr><tr><td>crypto_box</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/authenticated_encryption">https://libsodium.gitbook.io/doc/public-key_cryptography/authenticated_encryption</a></td></tr><tr><td>crypto_sign</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures">https://libsodium.gitbook.io/doc/public-key_cryptography/public-key_signatures</a></td></tr><tr><td>crypto_box_seal</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes">https://libsodium.gitbook.io/doc/public-key_cryptography/sealed_boxes</a></td></tr><tr><td>crypto_generichash</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/hashing/generic_hashing">https://libsodium.gitbook.io/doc/hashing/generic_hashing</a></td></tr><tr><td>crypto_shorthash</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/hashing/short-input_hashing">https://libsodium.gitbook.io/doc/hashing/short-input_hashing</a></td></tr><tr><td>crypto_pwhash</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/password_hashing/default_phf">https://libsodium.gitbook.io/doc/password_hashing/default_phf</a></td></tr><tr><td>crypto_kdf</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/key_derivation">https://libsodium.gitbook.io/doc/key_derivation</a></td></tr><tr><td>crypto_kx</td><td>✔️</td><td>✔️</td><td><a href="https://libsodium.gitbook.io/doc/key_exchange">https://libsodium.gitbook.io/doc/key_exchange</a></td></tr></tbody></table>
 <p><strong>Note:</strong> Memory Management in JS is limited to overwriting the memory with 0. 
 All other Memory-APIs are only available in the VM.</p>
+<h4 id="considered-for-the-future">Considered for the future</h4>
+<p>The following APIs I considered adding, but since they all appear below the
+"Advanced" Tab in the documentation, I decided against it for now. However, I
+have collected some here that I consider implementing in the future. If you need
+one of these or some other advanced API, please create an Issue and I will add
+it as soon as possible.</p>
+<table><thead><tr><th>libsodium API</th><th>VM</th><th>JS</th><th>Documentation</th></tr></thead><tbody><tr><td>crypto_onetimeauth</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/poly1305">https://libsodium.gitbook.io/doc/advanced/poly1305</a></td></tr><tr><td>crypto_scalarmult</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/scalar_multiplication">https://libsodium.gitbook.io/doc/advanced/scalar_multiplication</a></td></tr><tr><td>crypto_hash_sha</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/sha-2_hash_function">https://libsodium.gitbook.io/doc/advanced/sha-2_hash_function</a></td></tr><tr><td>crypto_auth_hmacsha</td><td>❔</td><td>❔</td><td><a href="https://libsodium.gitbook.io/doc/advanced/hmac-sha2">https://libsodium.gitbook.io/doc/advanced/hmac-sha2</a></td></tr></tbody></table>
 <h2 id="installation">Installation</h2>
 <p>Simply add <code>sodium</code> to your <code>pubspec.yaml</code> and run <code>pub get</code> (or <code>flutter pub get</code>).</p>
 <h2 id="usage">Usage</h2>
@@ -130,8 +137,12 @@ libsodium into dart, the second one about using the API.</p>
 <h3 id="loading-libsodium">Loading libsodium</h3>
 <p>How you load the library depends on whether you are running in the dart VM or
 as transpiled JS code.</p>
-<p><strong>Note:</strong> For flutter users, there is a another library in the making that will
-completely automate this part.</p>
+<p><strong>Note:</strong> For flutter users, you should use the
+<a href="https://pub.dev/packages/sodium_libs">sodium_libs</a> package, as it provides 
+embedded (or compile time added) binaries for every flutter platform. This way
+you can simply use the library without thinking about this part. You can check
+the documentation of <code>sodium_libs</code> to add it to your project and then continue
+at <a href="#using-the-api">Using the API</a>.</p>
 <h4 id="vm---loading-the-dynamic-library">VM - loading the dynamic library</h4>
 <p>In the dart VM, <code>dart:ffi</code> is used as backend to load and interact with the
 libsodium binary. So, all you need to do is load such a library and then pass
@@ -152,7 +163,9 @@ follow <a href="https://libsodium.gitbook.io/doc/installation">https://libsodium
 for your platform and then pass the correct path. If you are linking statically,
 you can use <code>DynamicLibrary.process()</code> (except on windows) instead of the path.</p>
 <p>However, here are some tips on how to get the library for some platforms and
-how to load it there:</p>
+how to load it there. For flutter users, you can simply add
+<a href="https://pub.dev/packages/sodium_libs">sodium_libs</a> to your project, which takes
+care of this for you.</p>
 <ul>
 <li><strong>Linux</strong>: Install <code>libsodium</code> via your system package manager. Then, you can load
 the <code>libsodium.so</code> from where the package manager put it.</li>
@@ -162,8 +175,12 @@ you placed the library.</li>
 <li><strong>macOS</strong>: Use homebrew and run <code>brew install libsodium</code> - then locate the binary
 in the Cellar. It is typically something like 
 <code>/usr/local/Cellar/libsodium/&lt;version&gt;/lib/libsodium.dylib</code>.</li>
-<li><strong>Android</strong>: Coming soon...</li>
-<li><strong>iOS</strong>: Coming soon...</li>
+<li><strong>Android</strong>: Clone the official sources and run the correct build script
+located at <a href="https://github.com/jedisct1/libsodium/tree/master/dist-build">https://github.com/jedisct1/libsodium/tree/master/dist-build</a>. The
+build will produce an <code>.so</code> file you can add to your <code>main/src/jniLibs</code> folder.</li>
+<li><strong>iOS</strong>: Simply add the <a href="https://github.com/jedisct1/swift-sodium">swift-sodium</a>
+package to your project. It will statically link your app with the library. You
+can use <code>DynamicLibrary.process()</code> to access the symbols.</li>
 </ul>
 <h4 id="transpiled-javascript---loading-the-javascript-code">Transpiled JavaScript - loading the JavaScript code.</h4>
 <p>The correct setup depends on your JavaScript environment (i.e. browser, nodejs,
@@ -179,7 +196,9 @@ final sodium = await SodiumInit.init(sodiumJS);
 <p>The complex part is how to load the library into dart. Generally, you can refer
 to <a href="https://github.com/jedisct1/libsodium.js/#installation">https://github.com/jedisct1/libsodium.js/#installation</a> on how to load the
 library into your JS environment. However, since we are running JavaScript code,
-the setup is a little more complex.</p>
+the setup is a little more complex. For flutter users, you can simply add
+<a href="https://pub.dev/packages/sodium_libs">sodium_libs</a> to your project, which takes
+care of this for you.</p>
 <p>The only platform I have tried so far is the browser. However, similar 
 approches should work for all JS environments that you can run transpiled dart
 code in.</p>
@@ -275,7 +294,8 @@ can either create such keys via the <code>*_keygen</code> methods, or directly v
 <p><strong>Note:</strong> Since these keys wrap native memory, it is mandatory that you dispose
 of them after you are done with a key, as otherwise they will leak memory.</p>
 <h2 id="documentation">Documentation</h2>
-<p>The documentation is available at <a href="https://pub.dev/documentation/sodium/latest/">https://pub.dev/documentation/sodium/latest/</a>. A full example can be found at <a href="https://pub.dev/packages/sodium/example">https://pub.dev/packages/sodium/example</a>.</p>
+<p>The documentation is available at <a href="https://pub.dev/documentation/sodium/latest/">https://pub.dev/documentation/sodium/latest/</a>. 
+A full example can be found at <a href="https://pub.dev/packages/sodium/example">https://pub.dev/packages/sodium/example</a>.</p>
 <p>The example runs both in the VM and on the web. To use it, see below.</p>
 <p>As preparation for all platforms, run the following steps:</p>
 <pre class="language-.sh"><code class="language-.sh">cd packages/sodium
@@ -341,7 +361,7 @@ dart pub global run webdev serve --release
 <footer>
   <span class="no-break">
     sodium
-      0.2.4
+      1.0.0
   </span>
 
   
