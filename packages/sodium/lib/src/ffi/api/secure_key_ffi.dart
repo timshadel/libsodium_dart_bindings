@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:ffi';
+import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:meta/meta.dart';
@@ -94,6 +95,35 @@ class SecureKeyFFI with SecureKeyEquality implements SecureKeyNative {
                 memoryProtection: MemoryProtection.noAccess,
               ),
         ),
+      );
+
+  @override
+  List<SecureKey> split(List<int> lengths) => runUnlockedNative(
+        (originalPointer) {
+          final list = originalPointer.asList();
+          final keys = <SecureKey>[];
+          final lenthsSum = lengths.reduce((value, element) => value + element);
+
+          var start = 0;
+          for (final length in lengths) {
+            final count = RangeError.checkValidRange(
+              start,
+              start + length,
+              list.length,
+            );
+            final sublist = Uint8List.fromList(
+              list.skip(start).take(count).toList(),
+            );
+            final keyBytes = sublist.toSodiumPointer(
+              _raw.sodium,
+              memoryProtection: MemoryProtection.noAccess,
+            );
+            keys.add(SecureKeyFFI(keyBytes));
+            start += count;
+          }
+
+          return keys;
+        },
       );
 
   @override

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:meta/meta.dart';
@@ -44,6 +45,26 @@ class SecureKeyJS with SecureKeyEquality implements SecureKey {
 
   @override
   SecureKey copy() => SecureKeyJS(sodium, Uint8List.fromList(_raw));
+
+  @override
+  List<SecureKey> split(List<int> lengths) {
+    final list = _raw;
+    final keys = <SecureKey>[];
+
+    var start = 0;
+    for (final length in lengths) {
+      final count = RangeError.checkValidRange(
+        start,
+        start + length,
+        list.length,
+      );
+      final sublist = list.skip(start).take(count).toList() as Uint8List;
+      keys.add(SecureKeyJS(sodium, sublist));
+      start += length;
+    }
+
+    return keys;
+  }
 
   @override
   void dispose() {

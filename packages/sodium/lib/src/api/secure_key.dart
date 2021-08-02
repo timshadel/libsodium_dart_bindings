@@ -106,6 +106,14 @@ abstract class SecureKey {
   /// without exposing the data to dart when using the dart VM.
   SecureKey copy();
 
+  /// Creates multiple secure keys from a single key. Especially useful for
+  /// using pwHash to generate enough bytes for multiple keys.
+  ///
+  /// The resulting keys are independent copies of portions of the original key,
+  /// but with the same memory protection as before. The copying is done on
+  /// native memory, without exposing the data to dart when using the dart VM.
+  List<SecureKey> split(List<int> lengths);
+
   /// Disposes the key.
   ///
   /// This will zero the memory of the key and then free any resources. This is
